@@ -1,0 +1,146 @@
+/* 변수 설정 */
+$bg-color: #d9d9d9;
+$box-white: #ffffff;
+$beige-btn: #d9c7a9;
+$dark-btn: #333333;
+$border-light: #cccccc;
+
+.login-page-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $bg-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0; // 최소 위아래 여백
+
+  // 이전에 정의한 반응형 여백 믹스인이 있다면 여기서 @include 하세요.
+  // 여기서는 와이어프레임 비율을 위해 박스 너비를 제한합니다.
+  .login-container {
+    background-color: $box-white;
+    width: 100%;
+    max-width: 600px; // 로그인 박스 최대 너비
+    padding: 80px 60px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+
+    .login-title {
+      font-size: 24px;
+      font-weight: 500;
+      margin-bottom: 60px;
+    }
+
+    .login-form {
+      text-align: left;
+
+      .input-group {
+        margin-bottom: 25px;
+
+        label {
+          display: block;
+          font-size: 14px;
+          margin-bottom: 8px;
+          color: #333;
+        }
+
+        input {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid $border-light;
+          font-size: 16px;
+          outline: none;
+          box-sizing: border-box;
+
+          &:focus {
+            border-color: #000;
+          }
+        }
+      }
+
+      .find-pw-btn {
+        background: none;
+        border: none;
+        font-size: 12px;
+        color: #999;
+        text-decoration: underline;
+        cursor: pointer;
+        padding: 0;
+        margin-bottom: 25px;
+      }
+
+      .login-submit-btn {
+        width: 100%;
+        padding: 18px;
+        background-color: $beige-btn;
+        color: #fff;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        transition: opacity 0.2s;
+
+        &:hover { opacity: 0.9; }
+      }
+    }
+
+    .divider {
+      margin: 30px 0;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #000;
+      }
+      span {
+        position: relative;
+        background-color: $box-white;
+        padding: 0 15px;
+        font-size: 14px;
+      }
+    }
+
+    .auth-footer-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      button {
+        width: 100%;
+        padding: 15px;
+        font-size: 14px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        transition: 0.2s;
+      }
+
+      .create-account-btn {
+        background-color: $dark-btn;
+        color: #fff;
+        border: none;
+        padding: 15px;
+        &:hover { background-color: #000; }
+      }
+
+      .google-signup-btn {
+        background-color: $box-white;
+        color: #333;
+        border: 1px solid $border-light;
+        img { width: 20px; }
+        &:hover { background-color: #f9f9f9; }
+      }
+    }
+  }
+}
+
+// 반응형 대응: 모바일에서는 패딩 조절
+@media (max-width: 480px) {
+  .login-container {
+    padding: 60px 30px !important;
+  }
+}
