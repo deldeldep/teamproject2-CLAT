@@ -1,3 +1,6 @@
+@use "./variables.scss" as *;
+
+
 @mixin responsive-spacing {
     // 1920 ~ 1441
     @media (max-width: 1920px) and (min-width: 1441px) {
@@ -42,7 +45,8 @@
     width: 100%;
     margin: 60px 0;
     padding: 0 20px;
-    font-family: sans-serif;
+    font-family: $font-Kr;
+    color: $sub1;
     @include responsive-spacing;
 
     .cart-main-layout {
@@ -100,8 +104,13 @@
                     background: #fff; 
                     cursor: pointer; 
                     padding: 4px; 
-                    display: flex; 
+                    display: flex;
+                    &:hover {
+                        background: #333;
+                        color: #fff;
+                    }
                 }
+                
             }
             .delete-btn { 
                 background: none; 
