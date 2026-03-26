@@ -73,43 +73,43 @@
             border-bottom: 1px solid #eee;
             text-align: center;
             .product-info {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            text-align: left;
-            .img-box {
-                width: 80px;
-                height: 80px;
-                background: #f4f4f4;
-                border-radius: 4px;
-                overflow: hidden; 
-            }
-            img { 
-                width: 100%; 
-                height: 100%; 
-                object-fit: cover; 
-            }
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                text-align: left;
+                .img-box {
+                    width: 80px;
+                    height: 80px;
+                    background: #f4f4f4;
+                    border-radius: 4px;
+                    overflow: hidden; 
+                }
+                img { 
+                    width: 100%; 
+                    height: 100%; 
+                    object-fit: cover; 
+                }
             }
             .quantity-control {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            button { 
-                border: 1px solid #ddd; 
-                background: #fff; 
-                cursor: pointer; 
-                padding: 4px; 
-                display: flex; 
-            }
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                button { 
+                    border: 1px solid #ddd; 
+                    background: #fff; 
+                    cursor: pointer; 
+                    padding: 4px; 
+                    display: flex; 
+                }
             }
             .delete-btn { 
-            background: none; 
-            border: none; 
-            cursor: pointer; 
-            color: #333; 
-            &:hover { color: #f44; } 
-            }
+                background: none; 
+                border: none; 
+                cursor: pointer; 
+                color: #333; 
+                &:hover { color: #f44; } 
+                }
         }
         .empty-msg { 
             text-align: center; 
@@ -132,35 +132,35 @@
             gap: 0;
             margin-bottom: 30px;
             input { 
-            flex: 1; 
-            padding: 10px; 
-            border: 1px solid #fff; 
+                flex: 1; 
+                padding: 10px; 
+                border: 1px solid #fff; 
             }
             button { 
-            padding: 10px 20px; 
-            background: #666; 
-            color: #fff; 
-            border: none; 
-            cursor: pointer; 
+                padding: 10px 20px; 
+                background: #666; 
+                color: #fff; 
+                border: none; 
+                cursor: pointer; 
             }
         }
         .summary-details {
             border-top: 1px solid #ccc;
             padding-top: 20px;
             .detail-row { 
-            display: flex; 
-            justify-content: space-between; 
-            margin-bottom: 12px; 
-            color: #555; 
+                display: flex; 
+                justify-content: space-between; 
+                margin-bottom: 12px; 
+                color: #555; 
             }
             .total-row { 
-            display: flex; 
-            justify-content: space-between; 
-            margin-top: 20px; 
-            font-size: 18px; 
-            font-weight: bold; 
-            border-top: 1px solid #ccc; 
-            padding-top: 20px; 
+                display: flex; 
+                justify-content: space-between; 
+                margin-top: 20px; 
+                font-size: 18px; 
+                font-weight: bold; 
+                border-top: 1px solid #ccc; 
+                padding-top: 20px; 
             }
         }
         .checkout-buttons {
@@ -169,17 +169,17 @@
             flex-direction: column;
             gap: 10px;
             button { 
-            padding: 15px; 
-            cursor: pointer; 
-            font-size: 15px; 
-            font-weight: bold; 
-            border: none; 
+                padding: 15px; 
+                cursor: pointer; 
+                font-size: 15px; 
+                font-weight: bold; 
+                border: none; 
             }
             .btn-black { background: #333; color: #fff; }
             .btn-white { 
-            background: #fff; 
-            color: #333; 
-            border: 1px solid #333; 
+                background: #fff; 
+                color: #333; 
+                border: 1px solid #333; 
             }
         }
         }

@@ -7,8 +7,8 @@ import '../style/cartPage.scss';
 const CartPage = () => {
     // 1. 카트 아이템
     const [cartItems, setCartItems] = useState([
-        { id: 1, name: 'Rose Essence Perfume', price: 85000, quantity: 1, image: 'https://via.placeholder.com/100' },
-        { id: 2, name: 'Woody Night Eau de Toilette', price: 92000, quantity: 2, image: 'https://via.placeholder.com/100' },
+        { id: 1, name: 'Rose Essence Perfume', price: 85000, quantity: 1, image: 'https://www.elle.co.kr/resources_old/online/org_online_image/el/e856171e-a9b3-48fe-842c-cdbab18f1750.jpg' },
+        { id: 2, name: 'Woody Night Eau de Toilette', price: 92000, quantity: 2, image: 'https://img.ssgdfs.com/upload/C00001/goos/org/193/230614000263193.jpg?SF=webp&AR=0' },
     ]);
 
     // 2. 추천 상품 (랜덤 5개)
@@ -16,13 +16,13 @@ const CartPage = () => {
 
     useEffect(() => {
         const allPerfumes = [
-        { id: 101, name: 'Velvet Rose', image: 'https://via.placeholder.com/200' },
-        { id: 102, name: 'Santal Mystique', image: 'https://via.placeholder.com/200' },
-        { id: 103, name: 'Citrus Spark', image: 'https://via.placeholder.com/200' },
-        { id: 104, name: 'Oud Noir', image: 'https://via.placeholder.com/200' },
-        { id: 105, name: 'Jasmine Bloom', image: 'https://via.placeholder.com/200' },
-        { id: 106, name: 'Ocean Breeze', image: 'https://via.placeholder.com/200' },
-        { id: 107, name: 'Lavender Calm', image: 'https://via.placeholder.com/200' },
+        { id: 101, name: 'Velvet Rose', image: 'https://ca.lotteimall.com/S/clickoneq.com/product_image/164/20230524/23052422124937_164.jpg?sh=1280&imw=780&ol=4&v=230524124147' },
+        { id: 102, name: 'Santal Mystique', image: 'https://www.chanel.com/images/w_0.51,h_0.51,c_crop/q_auto:good,f_auto,fl_lossy,dpr_1.1/w_1920/n-5-eau-de-parfum-spray-3-4fl-oz--packshot-default-125530-9564912943134.jpg' },
+        { id: 103, name: 'Citrus Spark', image: 'https://img.khan.co.kr/news/2022/04/16/l_2022041601003446000311245.jpg' },
+        { id: 104, name: 'Oud Noir', image: 'https://media.tiffany.com/is/image/tco/69330533_FRG_MAIN1X1?hei=602&wid=602&fmt=webp' },
+        { id: 105, name: 'Jasmine Bloom', image: 'https://web-resource.tamburins.com/catalog/product/12001506/0d9b6071-c0e9-433b-a10e-5c5afe10c3b1/thumbnail_Bottari_50ml_Perfume_2.jpg' },
+        { id: 106, name: 'Ocean Breeze', image: 'https://assets.burberry.com/is/image/Burberryltd/A036AAAB-02E0-41BC-8AE5-C51974918AC0?$BBY_V3_SL_1.275$&wid=581&hei=739' },
+        { id: 107, name: 'Lavender Calm', image: 'https://img.ssgdfs.com/upload/C00001/goos/org/641/221028000152641.jpg?SF=webp&AR=0' },
         ];
         const shuffled = [...allPerfumes].sort(() => 0.5 - Math.random());
         setRecommendedItems(shuffled.slice(0, 5));
