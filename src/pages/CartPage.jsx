@@ -28,11 +28,28 @@ const CartPage = () => {
         setRecommendedItems(shuffled.slice(0, 5));
     }, []);
 
-    // 3. 수량 변경 함수
+    // 3. 수량 변경 함수 (수정됨)
     const updateQuantity = (id, delta) => {
+        // 1. 현재 클릭한 아이템을 찾습니다.
+        const item = cartItems.find(item => item.id === id);
+        if (!item) return;
+
+        // 2. 변경될 새로운 수량을 계산합니다.
+        const newQuantity = item.quantity + delta;
+
+        // 3. 수량이 0이 되는 경우 확인 창을 띄웁니다.
+        if (newQuantity === 0) {
+        const isConfirmed = window.confirm('해당 상품을 장바구니에서 삭제하시겠습니까?');
+        if (isConfirmed) {
+            removeItem(id); // 확인을 누르면 삭제 함수 실행
+        }
+        return; // 함수 종료 (상태 업데이트를 하지 않음)
+        }
+
+        // 4. 수량이 0이 아니라면 정상적으로 수량을 업데이트합니다.
         setCartItems(prev =>
         prev.map(item =>
-            item.id === id ? { ...item, quantity: Math.max(1, item.quantity + delta) } : item
+            item.id === id ? { ...item, quantity: newQuantity } : item
         )
         );
     };
